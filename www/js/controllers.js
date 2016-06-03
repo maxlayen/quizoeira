@@ -1,7 +1,6 @@
 angular.module('app.controllers', [])
 
 .controller('inicioCtrl', function($scope) {
-    console.log("to aqui!");
 
     var json = JSON.parse(localStorage.perguntasFaceis);
      localStorage.questaoAtual = 1;
@@ -40,18 +39,17 @@ angular.module('app.controllers', [])
 
         if(localStorage.questaoAtual == 1){
             if(valor == jsonF[localStorage.primeira].resposta){
-              $state.go('fimDeJOGO');
-                /*document.getElementById("barraDeNivel").innerHTML = '<div class="bar bar-header bar-balanced"><button class="button icon" ui-sref="inicio"></button><h1 class="title" >Fácil</h1> </div>';
+                document.getElementById("barraDeNivel").innerHTML = '<div class="bar bar-header bar-balanced"><button class="button icon" ui-sref="inicio"></button><h1 class="title" >Fácil</h1> </div>';
                 document.getElementById("perguntas").innerHTML = '<p class="perguntar">' + jsonF[localStorage.segunda].pergunta + '</p>';
                 localStorage.questaoAtual = 2;
-                document.getElementById("resposta").value = "";*/
+                document.getElementById("resposta").value = "";
             } else {
-                /*alert('Errou!');
+                alert('Errou!');
                 document.getElementById("resposta").value = "";
 
                 document.getElementById("barraDeNivel").innerHTML = '<div class="bar bar-header bar-balanced"><button class="button icon" ui-sref="inicio"></button><h1 class="title" >Fácil</h1> </div>';
                 document.getElementById("perguntas").innerHTML = '<p class="perguntar">' + json[localStorage.primeira].pergunta + '</p>';
-                localStorage.questaoAtual = 1;*/
+                localStorage.questaoAtual = 1;
                 $state.go('fimDeJOGO');
             }
         } else if (localStorage.questaoAtual == 2){

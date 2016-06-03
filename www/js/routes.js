@@ -30,7 +30,7 @@ angular.module('app.routes', [])
 
   .state('fimDeJOGO', {
     url: '/fimDeJOGO',
-    templateUrl: 'templates/fimDeJOGO.html',
+    templateUrl: 'templates/fimDeJogo.html',
     controller: 'fimDeJOGOCtrl'
   })
 
